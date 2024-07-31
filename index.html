@@ -8,170 +8,211 @@
   <link rel="stylesheet" href="./src/output.css">
   <title>Frontend Mentor | Bookmark landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }     
-  </style>
 </head>
-<body> 
+<body class="font-myFont *:box-border">     
   
-  <nav class="flex items-center justify-between">
+  <nav class="p-8 flex items-center justify-between">
     <img src="./images/logo-bookmark.svg" alt="bookmark logo">
     <img class="sm:hidden" src="./images/icon-hamburger.svg" alt="icon open menu">
-    <div class="hidden nav__group sm:flex items-center"> 
-      <ul class="nav__links nav__links--desktop flex">
-        <li><a class="nav__link" href="#">Features</a></li>
-        <li><a class="nav__link" href="#">Pricing</a></li>
-        <li><a class="nav__link" href="#">Contact</a></li>
-      </ul>
-      <button type="button">Login</button> 
-    </div>
+    <div class="hidden nav__group sm:flex items-center gap-4"> 
+      <ul class="nav__links nav__links--desktop flex gap-4 uppercase">
+        <li><a class="nav__link hover:text-accent" href="#">Features</a></li>
+        <li><a class="nav__link hover:text-accent" href="#">Pricing</a></li> 
+        <li><a class="nav__link hover:text-accent" href="#">Contact</a></li>
+      </ul>   
+      <button class="hover:bg-transparent hover:border-2 hover:text-accent hover:shadow-md hover:border-solid hover:border-accent rounded-lg my-5 py-2 px-6 bg-accent text-white" type="button">Login</button> 
+    </div> 
   </nav>
-
-  <main> 
-     <section>
-      <div class="w-3/4 bg-blue-600 aspect-video rounded-full absolute right-0 z-0"></div> 
-      <img class="z-10" src="./images/illustration-hero.svg" alt="illustration of a tablet screen open on a generic website">
-      <div>
-        <h1>A Simple Bookmark Manager</h1>
-        <p>A clean and simple interface to organize your favourite websites. Open a new 
-          browser tab and see your sites load instantly. Try it for free.
-        </p> 
-        <div>
-          <button>Get it on Chrome</button>
-          <button>Get it on Firefox</button>
-        </div>
+   
+  <main class="max-w-4xl relative right-0 my-12 text-center">   
+     <section class="sm:flex sm:flex-row-reverse sm:items-stretch justify-between">
+      <div class="relative overflow-hidden sm:flex sm:basis-60 sm:flex-grow">
+        <div class="bg-bubble left-1/3"></div>
+        <img class="z-10 m-auto" src="./images/illustration-hero.svg" alt="illustration of a tablet screen open on a generic website">
+      </div> 
+      <div class="p-6 sm:flex-grow sm:text-left sm:basis-60">  
+        <h1 class="text-primary-300 font-bold text-3xl my-4">A Simple Bookmark Manager</h1>
+        <p class="text-primary-200 text-lg ">A clean and simple interface to organize your favourite websites. Open a new 
+          browser tab and see your sites load instantly. Try it for free.  
+        </p>  
+        <div class="flex sm:justify-start justify-center items-center gap-2.5  my-4">
+          <button class="hover:bg-transparent hover:border-2 hover:text-primary-100 hover:shadow-md hover:border-solid hover:border-primary-100 rounded-lg py-3 px-4 bg-primary-100 text-white">Get it on Chrome</button>
+          <button class="hover:bg-transparent hover:border-2 hover:text-primary-200 hover:shadow-md hover:border-solid hover:border-primary-200 rounded-lg py-3 px-4 text-primary-300 bg-gray-100 shadow-md">Get it on Firefox</button>
+        </div>  
       </div> 
     </section>
 
-    <section>
-      <div>
-        <h1>Features</h1>
-        <p>Our aim is to make it quick and easy for you to access your favourite websites. 
-          Your bookmarks sync between your devices so you can access them on the go.</p>
-      </div>
-      <ul>
-        <a href="#">Simple Bookmarking</a>
-        <a href="#">Speedy Searching</a>
-        <a href="#">Easy Sharing</a>
-      </ul>
-    </section>
-
-    <section>
-      <img src="./images/illustration-features-tab-1.svg" alt="generic illustration of a website">
-      <div>
-        <h1>Bookmark in one click</h1>
-        <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
+    <section class=" p-6 max-w-4xl m-auto"> 
+      <div> 
+        <h1 class="text-primary-300 font-bold text-2xl my-4">Features</h1>
+        <p class="text-primary-200 text-lg">Our aim is to make it quick and easy for you to access your favourite websites. 
+          Your bookmarks sync between your devices so you can access them on the go.</p> 
+      </div>     
+      <ul class="my-11 sm:border-b sm:flex items-center justify-around gap-4">  
+        <li class="py-3 sm:border-none border-y"><a class="hover:text-accent pb-3 before:w-4/5 before:bg-accent before:absolute relative before:h-1 before:top-full" href="#">Simple Bookmarking</a></li>
+        <li class="py-3 sm:border-none  border-b"><a class="hover:text-accent" href="#">Speedy Searching</a></li>   
+        <li class="py-3 sm:border-none border-b"><a class="hover:text-accent" href="#">Easy Sharing</a></li>
+      </ul>  
+    </section>  
+       <!-- tab 1 -->  
+    <section class="sm:flex sm:flex-row sm:items-stretch justify-between">
+      <div class="relative overflow-hidden sm:flex sm:basis-60 sm:flex-grow"> 
+        <div class="bg-bubble -left-1/4"></div>
+      <img class="m-auto" src="./images/illustration-features-tab-1.svg" alt="generic illustration of a website">
+      </div> 
+      <div class="p-6 sm:flex-grow sm:text-right sm:basis-60">
+        <h1 class="text-primary-300 font-bold text-2xl my-4">Bookmark in one click</h1>
+        <p class="text-primary-200 text-lg">Organize your bookmarks however you like. Our simple drag-and-drop interface 
           gives you complete control over how you manage your favourite sites.</p>
-          <button>More Info</button>
+      <button class="hidden sm:inline-block rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">More Info</button>
       </div>
     </section>
+<!-- tab 2 -->
+ <section class="hidden m-auto max-w-4xl">
+  <div class="relative p-6"> 
+  <div class="bg-bubble -left-1/4"></div>
+<img src="./images/illustration-features-tab-2.svg" alt="generic illustration of a website">
+</div> 
+<div class="p-6">
+  <h1 class="text-primary-300 font-bold text-2xl my-4">Intelligent search</h1>
+  <p class="text-primary-200 text-lg">Our powerful search feature will help you find saved sites in no time at all. 
+    No need to trawl through all of your bookmarks.</p>
+<button class="hidden sm:inline-block rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">More Info</button>
+</div>
+</section>
+<!-- tab 3 -->
+ <section class="hidden m-auto  max-w-4xl">
 
-    <section>
-      <div>
-        <h1>Download the extension</h1>
-        <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+  <div class="relative p-6 hidden">  
+    <div class="bg-bubble -left-1/4"></div>
+  <img src="./images/illustration-features-tab-3.svg" alt="generic illustration of a website">
+  </div> 
+  <div class="p-6"> 
+    <h1 class="text-primary-300 font-bold text-2xl my-4">Share your bookmarks</h1>
+    <p class="text-primary-200 text-lg">Easily share your bookmarks and collections with others. Create a shareable 
+      link that you can send at the click of a button.</p>
+  <button class="hidden sm:inline-block rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">More Info</button>
+  </div>
+ </section>
+
+    <section class="max-w-4xl  m-auto">
+      <div class="p-6">
+        <h1 class="text-primary-300 font-bold text-2xl my-4">Download the extension</h1>
+        <p class="text-primary-200 text-lg">We’ve got more browsers in the pipeline. Please do let us know if you’ve 
           got a favourite you’d like us to prioritize.</p>
       </div>
-      <div>
-        <div>
+       
+        <div class="p-6 flex flex-row flex-wrap items-center gap-20 justify-center"> 
+   
+        <div class="shadow-lg flex flex-col justify-center items-center rounded-md gap-3"> 
+          <div class="flex flex-col p-8 items-center gap-2"> 
+            <img class="mb-3" src="./images/logo-chrome.svg" alt="chrome logo">
+          <h3 class="font-medium text-xl">Add to Chrome</h3>
+          <h4 class="text-primary-200">Minimum version 62</h4>
+          </div> 
+          <img class="m-0" src="./images/bg-dots.svg" alt="useless decorative dots">
+          <button class="hover:bg-transparent hover:border-2 hover:text-primary-100 hover:shadow-md hover:border-solid hover:border-primary-100 rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">Add & Install Extension</button>
+        </div>
 
-        <div>
-          <div>
-            <img src="" alt="">
-          <h3>Add to Chrome</h3>
-          <h4>Minimum version 62</h4>
+        <div class="sm:relative sm:top-4 shadow-lg flex flex-col justify-center items-center rounded-md gap-3"> 
+          <div class="flex flex-col p-8 items-center gap-2">
+          <img src="./images/logo-firefox.svg" alt="firefox logo"> 
+        <h3 class="font-medium text-xl">Add to Firefox</h3>
+        <h4 class="text-primary-200">Minimum version 55</h4>
+        </div>
+        <img src="./images/bg-dots.svg" alt="useless decorative dots">
+        <button class="hover:bg-transparent hover:border-2 hover:text-primary-100 hover:shadow-md hover:border-solid hover:border-primary-100 rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">Add & Install Extension</button>
+        </div> 
+           
+   
+          <div class="sm:relative sm:top-8 shadow-lg flex flex-col justify-center items-center rounded-md gap-3">
+            <div class="flex flex-col p-8 items-center gap-2"> 
+            <img src="./images/logo-opera.svg" alt="opera logo">
+          <h3 class="font-medium text-xl">Add to Opera</h3> 
+          <h4 class="text-primary-200">Minimum version 46</h4>
           </div>
-          <button>Add & Install Extension</button>
-        </div>
+          <img src="./images/bg-dots.svg" alt="useless decorative dots">
+          <button class="hover:bg-transparent hover:border-2 hover:text-primary-100 hover:shadow-md hover:border-solid hover:border-primary-100 rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">Add & Install Extension</button>
+        </div> 
+      </div> 
+    </section> 
 
-        <div>
-          <img src="" alt="">
-        <h3>Add to Firefox</h3>
-        <h4>Minimum version 55</h4>
-        </div>
-        <button>Add & Install Extension</button>
-      </div>
-
-        <div>
-          <div>
-            <img src="" alt="">
-          <h3>Add to Opera</h3>
-          <h4>Minimum version 46</h4>
-          </div>
-          <button>Add & Install Extension</button>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h1>Frequently Asked Questions</h1>
-      <p>Here are some of our FAQs. If you have any other questions you’d like 
+    <section class="max-w-4xl  p-6 m-auto">
+      <h1 class="text-primary-300 font-bold text-2xl my-4">Frequently Asked Questions</h1>
+      <p class="text-primary-200 text-lg">Here are some of our FAQs. If you have any other questions you’d like 
         answered please feel free to email us.</p>
-        <ul>
-          <li>
-            <h2>
-              <label for="question-1">What is Bookmark?</label>
-              <button></button>
+        <ul>     
+          <li class="mb-2 border-b border-solid border-primary-200 p-4">
+            <h2 class="text-primary-300 flex justify-between items-center font-medium">
+              <label for="question-1" class="hover:text-accent cursor-pointer">What is Bookmark?</label>
+              <button><img src="./images/icon-arrow.svg" alt="open question"></button>
             </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+            <p class="hidden text-left my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
               justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
           </li>
 
-          <li>
-            <h2>
-              <label for="question-2">How can I request a new browser?</label>
-              <button></button>
+          <li class="mb-2 border-b border-solid border-primary-200 p-4">
+            <h2 class="text-primary-300 flex justify-between items-center font-medium">
+              <label for="question-2" class="hover:text-accent cursor-pointer">How can I request a new browser?</label>
+              <button><img src="./images/icon-arrow.svg" alt="open question"></button>
             </h2>
-            <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            <p class="text-left my-2 hidden">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
               Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
               ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
               Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
           </li>
 
-          <li>
-            <h2>
-              <label for="question-3">Is there a mobile app?</label>
-              <button></button>
+          <li class="mb-2 border-b border-solid border-primary-200 p-4">
+            <h2 class="text-primary-300 flex justify-between items-center font-medium">
+              <label for="question-3" class="hover:text-accent cursor-pointer">Is there a mobile app?</label>
+              <button><img src="./images/icon-arrow.svg" alt="open question"></button>
             </h2>
-            <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            <p class="text-left my-2 hidden">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
               urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
               sollicitudin ex et ultricies bibendum.</p>
           </li>
 
-          <li>
-            <h2>
-              <label for="question-4">What about other Chromium browsers?</label>
-              <button></button>
+          <li class="mb-8 border-b border-solid border-primary-200 p-4"> 
+            <h2 class="text-primary-300 flex justify-between items-center font-medium">
+              <label for="question-4" class="hover:text-accent cursor-pointer">What about other Chromium browsers?</label>
+              <button><img src="./images/icon-arrow.svg" alt="open question"></button>
             </h2>
-            <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            <p class="text-left my-2 hidden">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
               vitae neque eget nisl gravida pellentesque non ut velit.</p>
           </li>
         </ul>
-      <button>More Info</button>
+      <button class="rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">More Info</button>
     </section>
   </main>
 
-  <footer>
-    <div>
-      <p>35,000+ already joined</p>
-      <h1>Stay up-to-date with what we’re doing</h1>
-      <div>
-        <input type="email" placeholder="Enter your email address">
-        <button>Contact Us</button>
-      </div>
-      <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+  <footer class="bg-primary-100">
+    <div class="max-w-4xl  m-auto p-6 text-center flex flex-col items-center justify-stretch gap-4 font-thin text-white">
+      <p class="uppercase text-xs tracking-extra">35,000+ already joined</p>   
+      <h1 class="font-semibold text-xl">Stay up-to-date with what we’re doing</h1> 
+      <div class="w-full flex flex-wrap sm:gap-4 items-center justify-center"> 
+        <input required class="w-full sm:basis-72 flex-grow p-3 rounded-md" type="email" placeholder="Enter your email address">
+        <button type="submit" class="hover:font-semibold hover:bg-white hover:border-2 hover:text-accent hover:shadow-md hover:border-solid hover:border-accent w-full sm:basis-72 flex-grow-2 rounded-lg my-5 py-3 px-4 bg-accent text-white">Contact Us</button>
+      </div>  
+      <p class="attribution">   
+      Challenge by <a class="text-accent" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="text-accent" href="#" target="_blank">tortaruga</a>.
+    </p> 
     </div>
-
-    <ul>
-      <li>Features</li>
-      <li>Pricing</li>
-      <li>Contact</li>
-    </ul>
+  
+    <ul class="m-auto sm:flex-row sm:justify-between sm:items-center bg-primary-300 text-center text-sm flex flex-col items-center gap-3 text-white p-6">
+      <div class="sm:flex sm:items-center sm:gap-4 ">  
+      <li><img class="m-auto" src="./images/logo-white.svg" alt="bookmark logo"></li>
+      <li class="hover:text-accent cursor-pointer  uppercase font-thin tracking-wider">Features</li>
+      <li class="hover:text-accent cursor-pointer uppercase font-thin tracking-wider">Pricing</li>
+      <li class="hover:text-accent cursor-pointer uppercase font-thin tracking-wider">Contact</li>
+      </div>
+      <li>
+        <div class="flex items-center gap-4">
+          <a class="bg-icon-facebook bg-center bg-cover w-8 aspect-square" href="#"></a>
+          <a class="bg-icon-twitter bg-center bg-cover w-8 aspect-square" href="#"></a>  
+        </div>
+      </li>
+    </ul> 
   </footer>
   
 </body>
