@@ -6,26 +6,44 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./src/output.css">
+  <script defer src="./app.js"></script>
   <title>Frontend Mentor | Bookmark landing page</title>
-
+ 
 </head>
-<body class="font-myFont *:box-border">     
-  
-  <nav class="p-8 flex items-center justify-between">
-    <img src="./images/logo-bookmark.svg" alt="bookmark logo">
-    <img class="sm:hidden" src="./images/icon-hamburger.svg" alt="icon open menu">
-    <div class="hidden nav__group sm:flex items-center gap-4"> 
-      <ul class="nav__links nav__links--desktop flex gap-4 uppercase">
-        <li><a class="nav__link hover:text-accent" href="#">Features</a></li>
-        <li><a class="nav__link hover:text-accent" href="#">Pricing</a></li> 
-        <li><a class="nav__link hover:text-accent" href="#">Contact</a></li>
-      </ul>   
-      <button class="hover:bg-transparent hover:border-2 hover:text-accent hover:shadow-md hover:border-solid hover:border-accent rounded-lg my-5 py-2 px-6 bg-accent text-white" type="button">Login</button> 
+<body class="font-myFont relative top-0">  
+           
+  <nav class="p-8">
+    <div class="m-0 flex items-center justify-between">
+      <img class="m-0 logo logo-dark" src="./images/logo-bookmark.svg" alt="bookmark logo">
+      <button class="mobile-menu-btn"><img class="sm:hidden" src="./images/icon-hamburger.svg" alt="icon open menu">
+      </button>
+       
+      <div class="hidden nav__group sm:flex items-center gap-4 text-primary-300"> 
+        <ul class="nav__links nav__links--desktop flex gap-4 uppercase">
+          <li><a class="nav__link hover:text-accent " href="#">Features</a></li>
+          <li><a class="nav__link hover:text-accent " href="#">Pricing</a></li> 
+          <li><a class="nav__link hover:text-accent " href="#">Contact</a></li>
+        </ul>
+        <button class="border-white w-full  hover:bg-white border-2 hover:text-transparent border-solid rounded-lg my-5 py-2 px-6 bg-accent text-white" type="button">Login</button> 
+      </div> 
     </div> 
+     
+    <div class="mobile-menu hidden flex-col gap-8 w-full text-center items-center">
+      <ul class="nav__links w-full nav__links--mobile flex flex-col items-center uppercase">
+        <li class="border-t p-3 w-full"><a class="nav__link text-white hover:text-accent" href="#">Features</a></li>
+        <li class="border-t p-3 w-full"><a class="nav__link text-white hover:text-accent" href="#">Pricing</a></li> 
+        <li class="border-y p-3 w-full"><a class="nav__link text-white hover:text-accent" href="#">Contact</a></li>
+      </ul>    
+      <button class="hover:bg-transparent uppercase border-2 hover:text-accent border-solid border-white rounded-lg my-5 py-2 px-6 bg-transparent text-white" type="button">Login</button>  
+      <div class="flex items-center gap-4">
+        <a href="#"><img class="icon-fb" src="./images/icon-facebook.svg" alt="facebook icon"></a> 
+        <a href="#"><img class="icon-x" src="./images/icon-twitter.svg" alt="twitter icon"></a> 
+      </div>
+    </div>
   </nav>
-   
-  <main class="max-w-4xl relative right-0 my-12 text-center">   
-     <section class="sm:flex sm:flex-row-reverse sm:items-stretch justify-between">
+
+  <main class="text-center flex flex-col items-center">   
+     <section class="max-w-6xl self-end sm:flex relative right-0 sm:flex-row-reverse sm:items-stretch justify-between">
       <div class="relative overflow-hidden sm:flex sm:basis-60 sm:flex-grow">
         <div class="bg-bubble left-1/3"></div>
         <img class="z-10 m-auto" src="./images/illustration-hero.svg" alt="illustration of a tablet screen open on a generic website">
@@ -42,20 +60,20 @@
       </div> 
     </section>
 
-    <section class=" p-6 max-w-4xl m-auto"> 
+    <section class="p-6 max-w-6xl"> 
       <div> 
         <h1 class="text-primary-300 font-bold text-2xl my-4">Features</h1>
         <p class="text-primary-200 text-lg">Our aim is to make it quick and easy for you to access your favourite websites. 
           Your bookmarks sync between your devices so you can access them on the go.</p> 
       </div>     
       <ul class="my-11 sm:border-b sm:flex items-center justify-around gap-4">  
-        <li class="py-3 sm:border-none border-y"><a class="hover:text-accent pb-3 before:w-4/5 before:bg-accent before:absolute relative before:h-1 before:top-full" href="#">Simple Bookmarking</a></li>
-        <li class="py-3 sm:border-none  border-b"><a class="hover:text-accent" href="#">Speedy Searching</a></li>   
-        <li class="py-3 sm:border-none border-b"><a class="hover:text-accent" href="#">Easy Sharing</a></li>
+        <li class="py-3 sm:border-none border-y"><a class=" hover:text-accent tab-link-one underlined" href="#">Simple Bookmarking</a></li>
+        <li class="py-3 sm:border-none  border-b"><a class="hover:text-accent tab-link-two" href="#">Speedy Searching</a></li>   
+        <li class="py-3 sm:border-none border-b"><a class="hover:text-accent tab-link-three" href="#">Easy Sharing</a></li>
       </ul>  
     </section>  
        <!-- tab 1 -->  
-    <section class="sm:flex sm:flex-row sm:items-stretch justify-between">
+    <section class="tab-one max-w-6xl self-start sm:flex sm:flex-row sm:items-stretch justify-between">
       <div class="relative overflow-hidden sm:flex sm:basis-60 sm:flex-grow"> 
         <div class="bg-bubble -left-1/4"></div>
       <img class="m-auto" src="./images/illustration-features-tab-1.svg" alt="generic illustration of a website">
@@ -68,22 +86,21 @@
       </div>
     </section>
 <!-- tab 2 -->
- <section class="hidden m-auto max-w-4xl">
+ <section class="tab-two max-w-6xl self-start hidden m-auto sm:flex-row sm:items-stretch">
   <div class="relative p-6"> 
   <div class="bg-bubble -left-1/4"></div>
 <img src="./images/illustration-features-tab-2.svg" alt="generic illustration of a website">
 </div> 
 <div class="p-6">
-  <h1 class="text-primary-300 font-bold text-2xl my-4">Intelligent search</h1>
+  <h1 class="text-primary-300 font-bold text-2xl">Intelligent search</h1>
   <p class="text-primary-200 text-lg">Our powerful search feature will help you find saved sites in no time at all. 
     No need to trawl through all of your bookmarks.</p>
 <button class="hidden sm:inline-block rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">More Info</button>
 </div>
 </section>
 <!-- tab 3 -->
- <section class="hidden m-auto  max-w-4xl">
-
-  <div class="relative p-6 hidden">  
+ <section class="tab-three max-w-6xl self-start hidden m-auto sm:flex-row sm:items-stretch">
+  <div class="relative p-6">  
     <div class="bg-bubble -left-1/4"></div>
   <img src="./images/illustration-features-tab-3.svg" alt="generic illustration of a website">
   </div> 
@@ -95,7 +112,7 @@
   </div>
  </section>
 
-    <section class="max-w-4xl  m-auto">
+    <section class="max-w-6xl  m-auto">
       <div class="p-6">
         <h1 class="text-primary-300 font-bold text-2xl my-4">Download the extension</h1>
         <p class="text-primary-200 text-lg">We’ve got more browsers in the pipeline. Please do let us know if you’ve 
@@ -137,7 +154,7 @@
       </div> 
     </section> 
 
-    <section class="max-w-4xl  p-6 m-auto">
+    <section class="max-w-6xl  p-6 m-auto">
       <h1 class="text-primary-300 font-bold text-2xl my-4">Frequently Asked Questions</h1>
       <p class="text-primary-200 text-lg">Here are some of our FAQs. If you have any other questions you’d like 
         answered please feel free to email us.</p>
@@ -145,18 +162,18 @@
           <li class="mb-2 border-b border-solid border-primary-200 p-4">
             <h2 class="text-primary-300 flex justify-between items-center font-medium">
               <label for="question-1" class="hover:text-accent cursor-pointer">What is Bookmark?</label>
-              <button><img src="./images/icon-arrow.svg" alt="open question"></button>
-            </h2>
-            <p class="hidden text-left my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+              <button id="question-1" class="question"><img class="arrow" src="./images/icon-arrow.svg" alt="open question"></button>
+            </h2> 
+            <p class="answer hidden text-left my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
               justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
           </li>
 
           <li class="mb-2 border-b border-solid border-primary-200 p-4">
             <h2 class="text-primary-300 flex justify-between items-center font-medium">
               <label for="question-2" class="hover:text-accent cursor-pointer">How can I request a new browser?</label>
-              <button><img src="./images/icon-arrow.svg" alt="open question"></button>
+              <button id="question-2" class="question"><img class="arrow" src="./images/icon-arrow.svg" alt="open question"></button>
             </h2>
-            <p class="text-left my-2 hidden">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            <p class="answer text-left my-2 hidden">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
               Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
               ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
               Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
@@ -165,9 +182,9 @@
           <li class="mb-2 border-b border-solid border-primary-200 p-4">
             <h2 class="text-primary-300 flex justify-between items-center font-medium">
               <label for="question-3" class="hover:text-accent cursor-pointer">Is there a mobile app?</label>
-              <button><img src="./images/icon-arrow.svg" alt="open question"></button>
+              <button id="question-3" class="q question"><img class="arrow" src="./images/icon-arrow.svg" alt="open question"></button>
             </h2>
-            <p class="text-left my-2 hidden">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            <p class="answer text-left my-2 hidden">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
               urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
               sollicitudin ex et ultricies bibendum.</p>
           </li>
@@ -175,45 +192,52 @@
           <li class="mb-8 border-b border-solid border-primary-200 p-4"> 
             <h2 class="text-primary-300 flex justify-between items-center font-medium">
               <label for="question-4" class="hover:text-accent cursor-pointer">What about other Chromium browsers?</label>
-              <button><img src="./images/icon-arrow.svg" alt="open question"></button>
+              <button id="question-4" class="question"><img class="arrow" src="./images/icon-arrow.svg" alt="open question"></button>
             </h2>
-            <p class="text-left my-2 hidden">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            <p class="answer text-left my-2 hidden">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
               vitae neque eget nisl gravida pellentesque non ut velit.</p>
           </li>
         </ul>
       <button class="rounded-lg my-5 py-3 px-4 bg-primary-100 text-white">More Info</button>
     </section>
-  </main>
+  </main>  
 
-  <footer class="bg-primary-100">
-    <div class="max-w-4xl  m-auto p-6 text-center flex flex-col items-center justify-stretch gap-4 font-thin text-white">
+  <footer class="bg-primary-100">  
+    <div class="max-w-xl  m-auto p-6 text-center flex flex-col items-center justify-stretch gap-4 font-thin text-white">
       <p class="uppercase text-xs tracking-extra">35,000+ already joined</p>   
-      <h1 class="font-semibold text-xl">Stay up-to-date with what we’re doing</h1> 
-      <div class="w-full flex flex-wrap sm:gap-4 items-center justify-center"> 
-        <input required class="w-full sm:basis-72 flex-grow p-3 rounded-md" type="email" placeholder="Enter your email address">
-        <button type="submit" class="hover:font-semibold hover:bg-white hover:border-2 hover:text-accent hover:shadow-md hover:border-solid hover:border-accent w-full sm:basis-72 flex-grow-2 rounded-lg my-5 py-3 px-4 bg-accent text-white">Contact Us</button>
-      </div>  
+      <h1 class="font-semibold text-3xl">Stay up-to-date with what we’re doing</h1> 
+      <form novalidate class="contact-form w-full flex flex-wrap sm:gap-4 items-center justify-center">  
+        <div class="error-wrapper rounded-sm sm:basis-52 flex-grow"> 
+          <input required class="user-email relative w-full p-3 rounded-md text-black" type="email" placeholder="Enter your email address"> 
+          <p class="error-message text-left italic text-sm mt-1 hidden">Whoops, make sure it's an email</p>
+        </div> 
+        <button type="submit" class="hover:font-semibold hover:bg-white hover:border-2 hover:text-accent hover:shadow-md hover:border-solid hover:border-accent w-full sm:basis-52 flex-grow-2 rounded-lg my-5 py-3 px-4 bg-accent text-white">Contact Us</button>
+      </form>  
       <p class="attribution">   
       Challenge by <a class="text-accent" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a class="text-accent" href="#" target="_blank">tortaruga</a>.
     </p> 
     </div>
   
-    <ul class="m-auto sm:flex-row sm:justify-between sm:items-center bg-primary-300 text-center text-sm flex flex-col items-center gap-3 text-white p-6">
-      <div class="sm:flex sm:items-center sm:gap-4 ">  
-      <li><img class="m-auto" src="./images/logo-white.svg" alt="bookmark logo"></li>
-      <li class="hover:text-accent cursor-pointer  uppercase font-thin tracking-wider">Features</li>
-      <li class="hover:text-accent cursor-pointer uppercase font-thin tracking-wider">Pricing</li>
-      <li class="hover:text-accent cursor-pointer uppercase font-thin tracking-wider">Contact</li>
-      </div>
-      <li>
-        <div class="flex items-center gap-4">
-          <a class="bg-icon-facebook bg-center bg-cover w-8 aspect-square" href="#"></a>
-          <a class="bg-icon-twitter bg-center bg-cover w-8 aspect-square" href="#"></a>  
+    <section class="bg-primary-300">
+      <ul class="max-w-6xl m-auto sm:flex-row sm:justify-between sm:items-center text-center text-sm flex flex-col items-center gap-3 text-white p-6">
+        <div class="sm:flex sm:items-center sm:gap-4 ">  
+        <li><img class="m-auto" src="./images/logo-white.svg" alt="bookmark logo"></li>
+        <li class="hover:text-accent cursor-pointer  uppercase font-thin tracking-wider">Features</li>
+        <li class="hover:text-accent cursor-pointer uppercase font-thin tracking-wider">Pricing</li>
+        <li class="hover:text-accent cursor-pointer uppercase font-thin tracking-wider">Contact</li>
         </div>
-      </li>
-    </ul> 
+        <li>
+          <div class="flex items-center gap-4">
+     
+            <a href="#"><img class="icon-fb" src="./images/icon-facebook.svg" alt="facebook icon"></a> 
+            <a href="#"><img class="icon-x" src="./images/icon-twitter.svg" alt="twitter icon"></a> 
+          </div> 
+        </li>
+      </ul>
+    </section>
+               
   </footer>
   
-</body>
-</html>
+</body> 
+</html> 
