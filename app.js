@@ -69,7 +69,8 @@ const tabLink1 = document.querySelector('.tab-link-one');
 const tabLink2 = document.querySelector('.tab-link-two');
 const tabLink3 = document.querySelector('.tab-link-three');
 
-tabLink1.addEventListener('click', () => {
+tabLink1.addEventListener('click', (e) => {
+  e.preventDefault();
   tabLink1.classList.add('underlined');
   tabLink2.classList.remove('underlined');
   tabLink3.classList.remove('underlined');
@@ -82,7 +83,9 @@ tabLink1.addEventListener('click', () => {
   tab3.classList.remove('sm:flex');
 })
 
-tabLink2.addEventListener('click', () => {
+tabLink2.addEventListener('click', (e) => {
+  e.preventDefault();
+
   tabLink2.classList.add('underlined');
   tabLink1.classList.remove('underlined');
   tabLink3.classList.remove('underlined');
@@ -97,7 +100,9 @@ tabLink2.addEventListener('click', () => {
   
 })
 
-tabLink3.addEventListener('click', () => { 
+tabLink3.addEventListener('click', (e) => { 
+  e.preventDefault();
+
   tabLink3.classList.add('underlined');
   tabLink1.classList.remove('underlined');
   tabLink2.classList.remove('underlined');
