@@ -47,16 +47,20 @@ mobileMenuBtn.addEventListener('click', () => {
 
 let emailValue;
 
+const errorIcon = document.querySelector('.error-icon');
+
 contactForm.addEventListener('submit', (e) => {
    e.preventDefault();
   emailValue = userEmail.value;
   const emailRegex = /^[A-Za-z0-9-%_.]+@[A-Za-z0-9.-]+\.[a-z]{2,}$/;
   if (!emailRegex.test(emailValue)) {
    errorMsg.classList.remove('hidden');   
+   errorIcon.classList.remove('hidden');  
    errorWrapper.classList.toggle('bg-accent');
    errorWrapper.classList.toggle('p-0.5');
   } else {
    errorMsg.classList.add('hidden'); 
+   errorIcon.classList.add('hidden');
    errorWrapper.classList.toggle('p-0.5');
    errorWrapper.classList.toggle('bg-accent');
   }

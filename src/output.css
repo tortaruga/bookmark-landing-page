@@ -681,6 +681,14 @@ video {
   top: 0px;
 }
 
+.top-4{
+  top: 1rem;
+}
+
+.right-4{
+  right: 1rem;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -750,11 +758,6 @@ video {
   margin-bottom: 2.75rem;
 }
 
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -773,6 +776,10 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mb-4{
+  margin-bottom: 1rem;
+}
+
 .mb-8{
   margin-bottom: 2rem;
 }
@@ -787,6 +794,10 @@ video {
 
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
 }
 
 .box-border{
@@ -914,6 +925,10 @@ video {
 
 .max-w-xl{
   max-width: 36rem;
+}
+
+.max-w-4xl{
+  max-width: 56rem;
 }
 
 .flex-shrink{
@@ -2318,11 +2333,6 @@ video {
   color: hsl(0 94% 66% / var(--tw-text-opacity));
 }
 
-.text-black{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .text-blue-500{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -2753,17 +2763,6 @@ video {
   top: 0;
 }
 
-.user-email:before {
-  content: '';
-  position: absolute;
-  width: 2rem;
-  aspect-ratio: 1;
-  background: blue;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:cover;
-}
-
 .underlined{
   position: relative;
   padding-bottom: 0.75rem;
@@ -2971,6 +2970,10 @@ video {
 
   .sm\:gap-4{
     gap: 1rem;
+  }
+
+  .sm\:gap-8{
+    gap: 2rem;
   }
 
   .sm\:border-b{

@@ -24,19 +24,7 @@
     @apply min-h-screen absolute w-full z-10 m-0;
     top: 0;
 } 
-
-.user-email:before { 
-    content: '';   
-    position: absolute;
-    width: 2rem;
-    aspect-ratio: 1;
-    background: blue;  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-
-}
-
+ 
 .underlined {
     @apply pb-3 before:w-4/5 before:bg-accent before:absolute relative before:h-1 before:top-full;
 }
