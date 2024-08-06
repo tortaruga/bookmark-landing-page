@@ -32,3 +32,15 @@
 .tab-show {
     @apply sm:flex sm:flex-row sm:items-stretch justify-between;
 }
+
+.button-blue {
+    @apply hover:bg-transparent hover:border-2 hover:text-primary-100 hover:shadow-md hover:border-solid hover:border-primary-100 rounded-lg py-3 px-4 bg-primary-100 text-white my-8;
+}
+ 
+.button-red {
+    @apply hover:border-accent border-white w-full hover:bg-white border-2 hover:text-accent border-solid rounded-lg my-5 py-2 px-6 bg-accent text-white;
+}
+
+.nav__link {
+    @apply font-light tracking-widest hover:text-accent;
+}

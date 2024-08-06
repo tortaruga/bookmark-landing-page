@@ -677,16 +677,16 @@ video {
   right: 0px;
 }
 
+.right-4{
+  right: 1rem;
+}
+
 .top-0{
   top: 0px;
 }
 
 .top-4{
   top: 1rem;
-}
-
-.right-4{
-  right: 1rem;
 }
 
 .isolate{
@@ -919,16 +919,16 @@ video {
   width: 100%;
 }
 
+.max-w-4xl{
+  max-width: 56rem;
+}
+
 .max-w-6xl{
   max-width: 72rem;
 }
 
 .max-w-xl{
   max-width: 36rem;
-}
-
-.max-w-4xl{
-  max-width: 56rem;
 }
 
 .flex-shrink{
@@ -2098,6 +2098,10 @@ video {
   padding: 0.125rem;
 }
 
+.p-2{
+  padding: 0.5rem;
+}
+
 .p-3{
   padding: 0.75rem;
 }
@@ -2132,6 +2136,11 @@ video {
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .text-left{
@@ -2226,10 +2235,6 @@ video {
 
 .font-bold{
   font-weight: 700;
-}
-
-.font-light{
-  font-weight: 300;
 }
 
 .font-medium{
@@ -2788,7 +2793,74 @@ video {
     flex-direction: row;
     align-items: stretch;
   }
+}
 
+.button-blue{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: hsl(231 69% 60% / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.button-blue:hover{
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: hsl(231 69% 60% / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(231 69% 60% / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.button-red{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 94% 66% / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.button-red:hover{
+  --tw-border-opacity: 1;
+  border-color: hsl(0 94% 66% / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(0 94% 66% / var(--tw-text-opacity));
+}
+
+.nav__link{
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.nav__link:hover{
+  --tw-text-opacity: 1;
+  color: hsl(0 94% 66% / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px){
   .sm\:container{
     width: 100%;
   }
@@ -2832,16 +2904,6 @@ video {
   border-style: solid;
 }
 
-.hover\:border-accent:hover{
-  --tw-border-opacity: 1;
-  border-color: hsl(0 94% 66% / var(--tw-border-opacity));
-}
-
-.hover\:border-primary-100:hover{
-  --tw-border-opacity: 1;
-  border-color: hsl(231 69% 60% / var(--tw-border-opacity));
-}
-
 .hover\:border-primary-200:hover{
   --tw-border-opacity: 1;
   border-color: hsl(229 8% 60% / var(--tw-border-opacity));
@@ -2851,17 +2913,8 @@ video {
   background-color: transparent;
 }
 
-.hover\:bg-white:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .hover\:font-bold:hover{
   font-weight: 700;
-}
-
-.hover\:font-semibold:hover{
-  font-weight: 600;
 }
 
 .hover\:text-accent:hover{
@@ -2869,18 +2922,9 @@ video {
   color: hsl(0 94% 66% / var(--tw-text-opacity));
 }
 
-.hover\:text-primary-100:hover{
-  --tw-text-opacity: 1;
-  color: hsl(231 69% 60% / var(--tw-text-opacity));
-}
-
 .hover\:text-primary-200:hover{
   --tw-text-opacity: 1;
   color: hsl(229 8% 60% / var(--tw-text-opacity));
-}
-
-.hover\:text-transparent:hover{
-  color: transparent;
 }
 
 .hover\:shadow-md:hover{
@@ -2970,10 +3014,6 @@ video {
 
   .sm\:gap-4{
     gap: 1rem;
-  }
-
-  .sm\:gap-8{
-    gap: 2rem;
   }
 
   .sm\:border-b{
